@@ -1,0 +1,12 @@
+/* ------------------------------------------------------------ *\
+	# default-page
+\* ------------------------------------------------------------ */
+
+.section-base.section-article.default-page { font-size: 20px; }
+
+.default-page .breadcrumbs { padding-bottom: 25px; }
+.default-page .default-page__meta { padding-bottom: 75px; }
+.default-page .default-page__title { padding-bottom: 25px; color: #5B5600; }
+
+.default-page .default-page__search a { text-decoration: none; }
+.default-page .default-page__search a:hover { text-decoration: underline; }

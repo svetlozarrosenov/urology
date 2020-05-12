@@ -1,0 +1,39 @@
+/* ------------------------------------------------------------ *\
+	Accordion
+\* ------------------------------------------------------------ */
+
+.accordion {}
+.accordion .accordion__head { cursor: pointer;  }
+.accordion .accordion__head h3 { position: relative; font-weight: 600; display: inline-block; font-size: 24px; font-weight: 600; font-family: $ff-base;  padding-right: 33px; }
+.accordion .accordion__head h3:after { content: ''; display: inline-block; background: url(../images/ico-rounded-down.svg) no-repeat center/contain; height: 28px; width: 28px; vertical-align: middle; position: absolute; top: 0px; right: 0; transition: transform .4s; }
+.accordion .expanded .accordion__head h3:after  { transform: rotate(180deg);  }
+
+.accordion .accordion__body { display: none; padding: 15px 0; }
+.accordion .accordion__body p { margin-bottom: 15px; }
+.accordion .accordion__body p:last-child { margin-bottom: 0; }
+
+.accordion .accordion__section { border-bottom: 1px solid #979797; padding: 21px 0; margin: 0; }
+.accordion .accordion__section:first-child  { padding-top: 0; }
+.accordion .accordion__section:last-child { border: 0; padding-bottom: 0; }
+
+$breakpoint-mobile{
+	.accordion .accordion__head h3 { font-size: 20px; display: block; }
+	.accordion .accordion__head h3:after { width: 24px; height: 24px;  }
+}
+
+/* ------------------------------------------------------------ *\
+	Accordion Assistant
+\* ------------------------------------------------------------ */
+
+.accordion-assistant{ display: flex; }
+.accordion-assistant .accordion__section { display: none; background: $c-white; width: 100%; flex-direction: column; padding: 0 30px 30px; overflow: auto;  }
+.accordion-assistant .accordion__body { margin-bottom: 20px; font-size: 22px; }
+.accordion-assistant .accordion__foot { margin-top: auto;  }
+
+.accordion-assistant .accordion__section.current { display: flex; }
+.accordion-assistant .accordion__section .accordion__section { position: absolute; top: 0;  left: 0; width: 100%; height: 100%; }
+
+$breakpoint-mobile{
+	.accordion-assistant .accordion__section { padding: 0 20px 20px;  }
+	.accordion-assistant .accordion__body { font-size: 18px;  }
+}

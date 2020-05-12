@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------ *\
+	Careers
+\* ------------------------------------------------------------ */
+
+.careers > ul:not([class]) { list-style: none; padding: 0; display: flex; flex-wrap: wrap; margin: -22px -28px; }
+.careers > ul:not([class]) > li { padding: 22px 28px; display: flex; width: 50%; }
+
+$breakpoint-mobile{
+	.careers > ul:not([class]) { margin: -10px -15px; }
+	.careers > ul:not([class]) > li { width: 100%; padding: 10px 15px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Career
+\* ------------------------------------------------------------ */
+
+.career { width: 100%; border-radius: 5px; border-left: 15px solid $c-blue; box-shadow: -1px 2px 6px 1px rgba(0, 0, 0, .4); overflow: hidden; display: flex; }
+.career a { text-decoration: none; display: block; padding: 25px; width: 100%; }
+.career a:hover { color: $c-white; background: $c-blue; }
+.career ul { list-style: none;  }
+.career ul li { position: relative; padding-left: 34px;  }
+.career ul li i { position: absolute; top: 0; left: 0; }
+
+$breakpoint-mobile{
+	.career ul li { padding-left: 20px;  }
+}

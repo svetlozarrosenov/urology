@@ -1,0 +1,87 @@
+/* ------------------------------------------------------------ *\
+	# Button
+\* ------------------------------------------------------------ */
+
+[class^="btn"] { display: inline-block; vertical-align: middle; text-align: center; cursor: pointer; text-decoration: none; }
+[class^="btn"] {
+	-webkit-appearance: none;
+	 		appearance: none;
+}
+
+/* ------------------------------------------------------------ *\
+	Btn
+\* ------------------------------------------------------------ */
+
+.btn { font-size: 20px; font-weight: 600; padding: 5px 18px; color: $c-white; background: $c-blue; border-radius: 5px; border: 2px solid $c-blue; min-width: 165px; }
+.btn:hover { background: $c-white; color: $c-blue; }
+
+.btn--white { background: $c-white; color: $c-blue; border-color: $c-white; }
+.btn--white:hover { background: transparent; color: $c-white;  }
+
+.btn--outline { background: transparent; color: $c-blue; }
+.btn--outline:hover { background: $c-blue; color: $c-white;  }
+
+.btn--white.btn--outline { background: transparent; color: $c-white; }
+.btn--white.btn--outline:hover { color: $c-blue; background: $c-white;  }
+
+.btn--icon { background: transparent; color: $c-blue; display: inline-flex; align-items: center; }
+.btn--icon span { display: inline-block; width: 22px; height: 22px; background-size: contain; background-position: center; background-repeat: no-repeat; flex-shrink: 0; margin-right: 10px; }
+
+$breakpoint-mobile{
+	.btn { font-size: 16px; }
+}
+
+
+/* ------------------------------------------------------------ *\
+	- Block
+\* ------------------------------------------------------------ */
+
+.btn-block { display: block; padding-left: 0; padding-right: 0; }
+
+/* ------------------------------------------------------------ *\
+	Btn Phone
+\* ------------------------------------------------------------ */
+
+.btn-phone { display: flex; align-items: center; font-size: 20px; font-weight: 600;  margin: 9px 0 10px; }
+.btn-phone span { display: inline-block; width: 29px; height: 29px; margin-right: 15px; background-size: 98%; background-repeat: no-repeat; background-position: center; }
+
+/*btn-phone--large*/
+.btn-phone--large { font-size: 30px; }
+.btn-phone--large span { width: 46px; height: 46px;  }
+
+$breakpoint-mobile{
+	.btn-phone--large { font-size: 24px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Btn Callout
+\* ------------------------------------------------------------ */
+
+.btn-callout { color: $c-white; background: $c-gold; padding: 12px 25px; font-size: 18px; }
+.btn-callout:hover { color: $c-blue; background: $c-white; }
+
+
+/* ------------------------------------------------------------ *\
+	btn-search
+\* ------------------------------------------------------------ */
+
+.btn-search { width: 48px; display: flex; align-items: center; justify-content: center; border: 2px solid transparent; }
+.btn-search:hover { border-color: $c-white; }
+
+$breakpoint-mobile{
+	.btn-search { display: block; margin: 0 auto;  }
+}
+
+/* ------------------------------------------------------------ *\
+	Btn More
+\* ------------------------------------------------------------ */
+
+.btn-more { width: 41px; height: 41px; border: 2px solid $c-blue; border-radius: 50%; background:  url(../images/ico-chevron-right.svg) no-repeat center/ 8px 13px; }
+.btn-more:hover { background-color: rgba(10, 78, 104, .3); }
+
+/* ------------------------------------------------------------ *\
+	Btn share
+\* ------------------------------------------------------------ */
+
+.btn-share { cursor: default;  }
+.btn-share span { display: block; width: 55px; height: 45px; background-size: contain; background-position: center; background-repeat: no-repeat; margin: 0 auto; }

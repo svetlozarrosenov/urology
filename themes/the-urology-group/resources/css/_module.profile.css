@@ -1,0 +1,14 @@
+/* ------------------------------------------------------------ *\
+	Profile
+\* ------------------------------------------------------------ */
+
+.profile {}
+
+.profile .profile__content {  }
+
+.profile .profile__actions { margin-bottom: 36px; }
+.profile .profile__actions .btn { margin-bottom: 15px; }
+.profile .profile__actions .btn:last-child { margin-bottom: 0; }
+
+.profile .profile__image { margin-bottom: 30px; border-radius: 20px; overflow: hidden; }
+.profile .profile__image img { width: 100%; height: auto;  }

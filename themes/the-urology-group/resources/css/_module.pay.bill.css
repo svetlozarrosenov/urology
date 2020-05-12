@@ -1,0 +1,81 @@
+/* ------------------------------------------------------------ *\
+	Pay Bill
+\* ------------------------------------------------------------ */
+
+.form--pay-bil { padding-top: 50px; }
+
+.form--pay-bil .form--pay-bil-form__body { display: flex; width: 100%; }
+
+.form--pay-bil .form--pay-bil__first-row { width: 19%; margin-right: 20px; }
+.form--pay-bil .form--pay-bil__second-row { width: 79%; }
+
+.form--pay-bil__title { padding-bottom: 25px; font-size: 20px; font-weight: bold; color: #000; }
+
+.form--pay-bil .form--pay-bil__first-row-hint { padding-top: 20px; font-size: 18px; font-style: italic; }
+
+.form--pay-bil .form--pay-bil__second-row-not-matched-statement { margin-top: 25px; padding: 25px; background-color: #CF2E2E; color: #fff; }
+
+.form--pay-bil-form__controls input[type="radio"] { width: 20px; height: 20px; vertical-align: -15%; margin-right: 10px; }
+
+/* ------------------------------------------------------------ *\
+	states
+\* ------------------------------------------------------------ */
+
+.states { padding-top: 30px; }
+.states .states__state  { text-decoration: underline; margin-bottom: 20px; }
+.states .states__container h2 { position: relative; display: inline-block; font-size: 20px; color: #0F0F0F; }
+.states .states__container { padding-bottom: 10px; }
+
+.states .states__location, .states .states__location input { margin-right: 10px; font-size: 20px; color: #0F0F0F; }
+.states .states__location { margin-bottom: 12px; }
+.states .states-locations-row { display: flex; flex-direction: row; }
+
+.states .states-locations-row .states-locations-column { margin-right: 30px; }
+
+.states .states__help { padding: 25px; background-color: #CF2E2E; color: #fff; }
+
+.states__location input[type="checkbox"] { width: 20px; height: 20px; vertical-align: -15%; }
+
+/* ------------------------------------------------------------ *\
+	pay-bill-section
+\* ------------------------------------------------------------ */
+
+.pay-bill-section { padding-top: 60px; }
+
+.pay-bill-section .pay-bill-section__content ul { padding-left: 40px; }
+.pay-bill-section .pay-bill-section__content ul li, .pay-bill-section .pay-bill-section__content p { font-size: 20px; color: #0F0F0F; }
+.pay-bill-section .pay-bill-section__actions { margin: 45px 0; text-align: center; }
+.pay-bill-section .pay-bill-section__actions-btn { font-size: 20px; padding: 10px 50px; color: #0A4E68; border: 2px solid #0A4E68; border-radius: 5px; text-decoration: none; transition: .7s; }
+.pay-bill-section .pay-bill-section__actions-btn:hover { opacity: .7; }
+
+.pay-bill-section .pay-bill-section__note { font-size: 18px; font-style: italic; }
+
+/* ------------------------------------------------------------ *\
+	not-founc-account-number
+\* ------------------------------------------------------------ */
+
+.not-founc-account-number { padding: 25px; background-color: #CF2E2E; color: #fff; }
+
+/* ------------------------------------------------------------ *\
+	invoice-images
+\* ------------------------------------------------------------ */
+
+.invoice-images { margin: 0 auto; text-align: center; display: flex; justify-content: center; }
+
+.invoice-images .invoice-images__container { text-align: center;  position: relative; width: auto; max-width: 1200px; display: flex; }
+
+.invoice-images .invoice-images__tug-image, .invoice-images .invoice-images__tuc-image { width: 50%; padding: 0 25px; }
+
+.invoice-images .mfp-close { width: 30px; height: 30px; right: 15px; top: -33px; color: #fff; }
+
+.page-template-default .mfp-content { width: auto; }
+
+@media(max-width: 767px){ 
+	.invoice-images .invoice-images__tug-image, .invoice-images .invoice-images__tuc-image { width: 50%; padding: 0 2px; }
+}
+
+@media(max-width: 479px){ 
+	.invoice-images .mfp-close { right: -4px; }
+	.invoice-images .invoice-images__container { display: flex; flex-direction: column;  }
+	.invoice-images .invoice-images__tug-image, .invoice-images .invoice-images__tuc-image { width: 100%; padding: 2px 0; }
+}

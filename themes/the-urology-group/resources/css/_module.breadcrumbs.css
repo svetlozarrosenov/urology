@@ -1,0 +1,15 @@
+/* ------------------------------------------------------------ *\
+	breadcrumbs
+\* ------------------------------------------------------------ */
+
+.breadcrumbs { font-size: 20px; text-align: right; }
+.breadcrumbs a { text-decoration: none;  }
+.breadcrumbs a:hover { color: $c-blue;  }
+.breadcrumbs ul { list-style: none; display: inline-flex;  flex-wrap: wrap; align-items: flex-start;  }
+.breadcrumbs ul li { padding-right: 10px;  }
+.breadcrumbs ul li + li { position: relative; padding-left: 20px;  }
+.breadcrumbs ul li + li:before { content: '\f105'; font-family: $ff-FontAwesome; font-size: 18px; position: absolute; top: 50%; left: 0; transform: translateY(-50%); }
+
+$breakpoint-mobile{
+	.breadcrumbs { font-size: 16px; padding: 5px 0 0; }
+}

@@ -1,0 +1,42 @@
+/* ------------------------------------------------------------ *\
+	Tabs
+\* ------------------------------------------------------------ */
+
+.tabs {}
+
+.tabs .tabs__head { margin-bottom: 40px;  }
+
+.tabs .tabs__nav { font-weight: 600; font-size: 28px; }
+.tabs .tabs__nav a { text-decoration: none; }
+.tabs .tabs__nav ul { display: flex; flex-wrap: wrap; margin: 0 -20px; }
+.tabs .tabs__nav ul li { padding: 5px 20px; opacity: .6; }
+.tabs .tabs__nav .current { color: $c-blue; opacity: 1; }
+$breakpoint-mobile{
+	.tabs .tabs__head  { display: none;  }
+}
+
+/* ------------------------------------------------------------ *\
+	Tab
+\* ------------------------------------------------------------ */
+
+.tab { display: none; }
+.tab .tab__head { display: none; }
+
+@media(min-width: 768px){
+	.tab.current { display: block !important; }
+	.tab.current .tab__body { display: block !important;  }
+}
+
+
+$breakpoint-mobile{
+	.tab + .tab { margin-top: 20px;  }
+	.tab .tab__head { display: block; font-size: 22px; margin-bottom: 10px; }
+	.tab .tab__head p { display: inline-block; }
+	.tab .tab__head p:after { content: '\f0d7'; font-family: $ff-FontAwesome;  font-size: 20px; display: inline-block; width: 24px; text-align: center;  transition: transform .4s; }
+	.tab .tab__head.expanded p:after  { transform: rotate(-90deg);  }
+
+	.tab { display: block;  }
+	.tab .tab__body { display: none; }
+
+	.tab.current .tab__body  { display: block; }
+}

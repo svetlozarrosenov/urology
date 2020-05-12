@@ -1,0 +1,13 @@
+/* ------------------------------------------------------------ *\
+	Links
+\* ------------------------------------------------------------ */
+
+a.links-all { display: inline-block; font-weight: 600; color: $c-blue;  position: relative; padding-left: 7px; text-decoration: none; }
+a.links-all:before { content: ''; position: absolute; top: 3px; bottom: 5px; left: 0;  border-right: 2px solid $c-gold; }
+a.links-all:after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: $c-gold; transition: width .4s; }
+a.links-all:hover:after { width: 100%;  }
+
+span.links-all { display: inline-block; font-weight: 600; color: $c-blue;  position: relative; padding-left: 7px; text-decoration: none; }
+span.links-all:before { content: ''; position: absolute; top: 3px; bottom: 5px; left: 0;  border-right: 2px solid $c-gold; }
+span.links-all:after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: $c-gold; transition: width .4s; }
+span.links-all:hover:after { width: 100%;  }

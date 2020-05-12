@@ -1,0 +1,65 @@
+/* ------------------------------------------------------------ *\
+	Slider
+\* ------------------------------------------------------------ */
+
+.slider-banner .slider__clip,
+.slider-banner .slider__slides,
+.slider-banner .slider__slide { height: 100%;  }
+
+.slider-banner .slider__slide  { background-size: cover; background-position: top center;  }
+
+.slider-banner { position: relative;  }
+.slider-banner .swiper-button-prev,
+.slider-banner .swiper-button-next { width: 37px; height: 64px; background: rgba(10, 78, 104, 0.8); border: 1px solid #ffffff;border-radius: 5px; margin-top: -32px; opacity: 1; transition: background .4s; display: none; }
+
+.slider-banner .initialized .swiper-button-prev,
+.slider-banner .initialized .swiper-button-next { display: inline-block; }
+
+.slider-banner .swiper-button-prev { left: 9vw; }
+.slider-banner .swiper-button-next { right: 9vw; }
+
+.slider-banner .swiper-button-prev:after,
+.slider-banner .swiper-button-next:after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/ico-angle-right-white.svg) no-repeat center/14px 22px; }
+.slider-banner .swiper-button-prev:after { transform: rotate(180deg);  }
+
+
+.slider-banner .swiper-button-prev:hover,
+.slider-banner .swiper-button-next:hover { background: $c-blue; }
+
+/*ie*/
+_:-ms-fullscreen, :root .slider-banner .slider__slide{ height: 101%; }
+
+/*edge*/
+_:-ms-lang(x), .slider-banner .slider__slide{ height: 101%; }
+
+@media(max-width: 1600px){
+	.slider-banner .swiper-button-prev { left: 2vw; }
+	.slider-banner .swiper-button-next { right: 2vw; }
+}
+
+$breakpoint-large-desktop{
+	.slider-banner .swiper-button-prev { left: 5px; }
+	.slider-banner .swiper-button-next { right: 5px; }
+}
+
+@media(max-width: 1279px){
+	.slider-banner .swiper-button-prev { left: 10px; }
+	.slider-banner .swiper-button-next { right: 10px; }
+}
+
+$breakpoint-mobile{
+	.slider-banner:after  { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 7.7vw; background: url(../images/hero-image-element.svg) no-repeat top left/cover; z-index: 5; pointer-events: none;  }
+
+	.slider-banner .initialized .swiper-button-prev,
+	.slider-banner .initialized .swiper-button-next,
+	.slider-banner .swiper-button-prev,
+	.slider-banner .swiper-button-next { display: none; }
+}
+
+/* ------------------------------------------------------------ *\
+	Slider
+\* ------------------------------------------------------------ */
+
+.swiper-content-slider {  }
+.swiper-content-slider .swiper-slide { opacity: 0 !important; }
+.swiper-content-slider .swiper-slide-active { opacity: 1 !important; }

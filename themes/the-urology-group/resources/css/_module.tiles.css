@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ *\
+	Tiles
+\* ------------------------------------------------------------ */
+
+.tiles > ul:not([class]) { list-style: none; padding: 0; display: flex; flex-wrap: wrap; margin: -5px; }
+.tiles > ul:not([class]) > li { width: 33.33%; padding: 5px; display: flex; }
+
+$breakpoint-mobile{
+	.tiles > ul:not([class]) > li { width: 100%; }
+}
+
+/* ------------------------------------------------------------ *\
+	Tiles
+\* ------------------------------------------------------------ */
+
+.tile { width: 100%; background: $c-white; border: 1px solid $c-gold; border-radius: 5px; padding: 29px 25px 35px;  }
+.tile h4 { margin-bottom: 20px; color: $c-gold; }
+.tile h4:last-child { margin-bottom: 0; }
+
+.tile .form-search { margin-bottom: 23px; }
+.tile .btn-phone { margin-bottom: 23px; }
+
+$breakpoint-mobile{
+	.tile { padding: 20px; }
+}

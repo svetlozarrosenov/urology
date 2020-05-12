@@ -1,0 +1,11 @@
+/* ------------------------------------------------------------ *\
+	# physician-autocompleted-names
+\* ------------------------------------------------------------ */
+
+.header-search-form.form-search { position: relative; overflow: visible; }
+
+.physician-autocompleted-names { position: absolute; width: 100%; top: 47px; left: 0; background-color: #fff; z-index: 999; border: 1px solid #EAEAEA; border-radius: 5px; }
+
+.physician-autocompleted-names li { list-style-type: none; padding: 10px 10px; }
+
+.physician-autocompleted-names li:hover { cursor: pointer; background-color: #EAEAEA; }

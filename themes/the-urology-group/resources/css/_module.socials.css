@@ -1,0 +1,49 @@
+/* ------------------------------------------------------------ *\
+	Socials
+\* ------------------------------------------------------------ */
+
+.socials { font-size: 32px; }
+.socials ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; margin: -5px -10px; }
+.socials ul li { padding: 5px 10px;  }
+.socials ul a { display: block; width: 58px; height: 58px; line-height: 58px; text-align: center; border: 2px solid $c-white; border-radius: 50%; }
+.socials ul a:hover { color: $c-gold; background: $c-white; }
+
+$breakpoint-mobile{
+	.socials { font-size: 24px; }
+	.socials ul { justify-content: center; }
+	.socials ul a { width: 44px; height: 44px; line-height: 44px; }
+}
+
+/* ------------------------------------------------------------ *\
+	socials-share
+\* ------------------------------------------------------------ */
+
+.socials-share { font-size: 20px; font-weight: 600; display: flex; }
+.socials-share .btn-share { margin-right: 50px; align-self: center;}
+.socials-share ul { display: flex; flex-wrap: wrap; border-left: 1px solid #979797; padding: 10px 25px; }
+.socials-share ul li { padding: 5px 14px;  }
+.socials-share ul a { display: inline-block; padding: 8px 17px; text-decoration: none; border-radius: 5px; background: #7f7f7f; color: $c-white; min-width: 122px; }
+.socials-share ul a:hover { opacity: .7; }
+.socials-share ul i { margin-right: 10px;  }
+
+.socials-share .link-mail { font-size: 24px;}
+.socials-share .link-mail a { padding: 6px 10px; min-width: 1px; }
+.socials-share .link-mail i  { margin-right: 0; }
+
+.socials-share .link-facebook a { background: #3b5998; }
+.socials-share .link-twitter a { background: #1dcafd; }
+.socials-share .link-linkedin a { background: #0e78a8; }
+
+$breakpoint-mobile{
+	.socials-share .btn-share { margin-right: 20px; }
+	.socials-share ul { padding: 10px;  }
+	.socials-share ul li { padding: 5px; }
+}
+
+@media(max-width: 575px){
+	.socials-share { flex-wrap: wrap;}
+	.socials-share ul { position: relative; border-left: 0;  padding: 20px 0 0; margin: -5px; }
+	.socials-share ul li { width: 50%; }
+	.socials-share ul li a { display: block; width: 100%; text-align: center; }
+	.socials-share ul:before { content: '';  position: absolute; top: 10px; left: 5px; right: 5px;  border-top: 1px solid #979797; }
+}

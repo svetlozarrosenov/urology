@@ -1,0 +1,65 @@
+/* ------------------------------------------------------------ *\
+	# Lists
+\* ------------------------------------------------------------ */
+
+[class^="list"] > ul { list-style: none; position: relative; }
+
+/* ------------------------------------------------------------ *\
+	List Info
+\* ------------------------------------------------------------ */
+
+.list-info { font-weight: 300; font-size: 18px; }
+.list-info ul { display: flex; flex-wrap: wrap; margin: -15px; }
+.list-info ul li { width: 50%; padding: 15px; }
+.list-info strong { font-weight: 500; font-size: 20px; }
+
+$breakpoint-mobile{
+	.list-info ul li { width: 100%; }
+}
+
+/* ------------------------------------------------------------ *\
+	List Bio
+\* ------------------------------------------------------------ */
+
+.list-bio { font-size: 22px; margin-bottom: 40px; }
+.list-bio a { text-decoration: none; }
+.list-bio:last-child { margin-bottom: 0; }
+.list-bio h5 { border-bottom: 2px solid #121212; padding-bottom: 10px; margin-bottom: 15px; }
+.list-bio ul {  }
+.list-bio ul li { position: relative; padding-left: 25px;  }
+.list-bio ul li + li { margin-top: 3px;  }
+.list-bio ul li:before { content: ''; position: absolute; top: 0; left: 0; width: 26px; height: 26px; background: url(../images/ico-caret-right.svg) no-repeat center/contain;  color: #31556f;}
+
+/* ------------------------------------------------------------ *\
+	List simptoms
+\* ------------------------------------------------------------ */
+
+.list-simptoms {  }
+.list-simptoms ul { display: flex; flex-wrap: wrap; margin: -12px; justify-content: center; }
+.list-simptoms ul li { padding: 12px;  }
+.list-simptoms ul a { text-decoration: none; display: flex; background-color: #f5f5f5; border: 1px solid #121212; border-radius: 5px; padding: 4px 10px; }
+.list-simptoms ul a:hover { box-shadow: 0 0 5px rgba(0, 0, 0, .3); }
+.list-simptoms img { display: inline-block; width: 20px; height: 20px; line-height: 1; align-self: center; margin-left: 4px; }
+
+$breakpoint-mobile{
+	.list-simptoms ul li { padding: 6px 12px; }
+}
+
+/* ------------------------------------------------------------ *\
+	List Locations Info
+\* ------------------------------------------------------------ */
+
+.list-location { max-width: 355px; margin: 0 auto; font-size: 22px; }
+.list-location .form { margin-bottom: 30px;  }
+
+.list-location-info { text-align: left; }
+.list-location-info ul { display: none; margin-bottom: 0; }
+.list-location-info ul.current { display: block; }
+.list-location-info strong { display: block; }
+.list-location-info a { text-decoration: none; }
+.list-location-info a:hover { color: $c-blue; }
+.list-location-info li + li { margin-top: 30px;  }
+
+$breakpoint-mobile{
+	.list-location { font-size: 18px; }
+}

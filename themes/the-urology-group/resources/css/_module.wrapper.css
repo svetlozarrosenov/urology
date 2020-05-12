@@ -1,0 +1,17 @@
+/* ------------------------------------------------------------ *\
+	- Wrapper
+\* ------------------------------------------------------------ */
+
+.wrapper { position: relative; display : flex; flex-direction: row; flex-wrap : wrap; background-color: $c-white; overflow: hidden; }
+
+.wrapper__inner { width: 100%; display: flex; flex-direction: column; min-height: 100vh;}
+
+body.is-fixed .wrapper__inner { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
+body.has-menu-opened.admin-bar .wrapper__inner  { top: 32px;  }
+
+body.admin-bar .wrapper__inner { min-height: calc( 100vh - 32px); }
+
+$breakpoint-admin-bar {
+	body.admin-bar .wrapper__inner { min-height: calc( 100vh - 46px); }
+	body.has-menu-opened.admin-bar .wrapper__inner  { top: 46px;  }
+}

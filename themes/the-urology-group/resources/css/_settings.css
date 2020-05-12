@@ -1,0 +1,42 @@
+$font-size-base 			: 20px;
+$font-weight-base 			: 400;
+$line-height-base			: 1.2;
+
+
+$t-duration 				: 0.4s;
+
+
+$shell-max-width 			: 1170px;
+$shell-gutter 				: 20px;
+
+$ff-FontAwesome 			: 'FontAwesome';
+$ff-base 					: 'proxima-nova', sans-serif;
+$ff-base-serif				: 'minion-pro', serif;
+
+
+$c-black 					: #000;
+$c-white 					: #fff;
+$c-base 					: #0a4e68;
+$c-blue 					: #0a4e68;
+$c-gold 					: #5B5600;
+$c-orange 					: #994707;
+
+$c-black-base				: #0f0f0f;
+
+$responsive-xxs				: 374px;
+$responsive-xs				: 767px;
+$responsive-xs-min 			: 768px;
+$responsive-admin-bar 		: 782px;
+$responsive-ios				: 812px;
+$responsive-sm				: 1023px;
+$responsive-md				: 1200px;
+$responsive-lg 				: 1400px;
+
+$breakpoint-mobile-portrait : @media (max-width: $responsive-xxs);
+$breakpoint-mobile			: @media (max-width: $responsive-xs), screen and (max-width: $responsive-ios) and (orientation: landscape);
+$breakpoint-admin-bar 		: @media (max-width: $responsive-admin-bar);
+$breakpoint-tablet-portrait	: @media (max-width: $responsive-sm);
+$breakpoint-small-desktop	: @media (max-width: $responsive-md);
+$breakpoint-large-desktop 	: @media (max-width: $responsive-lg);
+$desktop-hovers 			: @media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover);
+$retina						: @media (min-resolution: 2dppx);

@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------ *\
+	Members
+\* ------------------------------------------------------------ */
+
+.members > ul:not([class]) { list-style: none; padding: 0; }
+.members > ul:not([class]) > li + li { margin-top: 75px; }
+
+$breakpoint-mobile{
+	.members > ul:not([class]) > li + li { margin-top: 40px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Member
+\* ------------------------------------------------------------ */
+
+.member { display: flex; flex-wrap: wrap; }
+.member a { text-decoration: none;  }
+.member h5 { font-size: 24px; font-weight: 600; }
+
+.member .member__content { width: 100%; padding: 0 40px 0 0;  }
+
+.member .member__image { width: 185px; padding-top: 8px; }
+.member .member__image + .member__content  { width: calc(100% - 185px); padding: 0 40px 0 33px;  }
+
+.member .links-all { margin-top: 8px; }
+
+$breakpoint-mobile{
+	.member .member__image + .member__content { padding: 0 0 0 20px;  }
+	.member .links-all { margin-top: 0; }
+}
+
+@media(max-width: 575px){
+	.member{ flex-wrap: wrap;  }
+	.member .member__image + .member__content { width: 100%; padding: 20px 0 0 0; }
+}

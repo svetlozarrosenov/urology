@@ -1,0 +1,437 @@
+/* ------------------------------------------------------------ *\
+	# Form
+\* ------------------------------------------------------------ */
+
+	/*
+		- Base
+	*/
+
+input::placeholder { color: inherit; opacity: 1; }
+textarea::placeholder { color: inherit; opacity: 1; }
+
+input:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0 0 0 1000px #fff inset; }
+
+input[type=text],
+input[type=button],
+input[type=tel],
+input[type=email],
+input[type=submit],
+input[type=date],
+input[type=search],
+textarea {
+	-webkit-appearance: none;
+			appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* ------------------------------------------------------------ *\
+	Form Search
+\* ------------------------------------------------------------ */
+
+.form-search { position: relative; font-size: 16px; margin: 9px 0 12px; }
+.form-search:last-child { margin-bottom: 0; }
+.form-search .field { display: block; width: 100%; padding: 0 40px 0 10px; border: 2px solid $c-blue; background: #fff; border-radius: 5px; height: 29px; font-style: italic; }
+.form-search .field:focus { background-color: #fff; }
+.form-search .field::-webkit-input-placeholder { color: $c-black-base; }
+.form-search .field::-moz-placeholder { color: $c-black-base; }
+.form-search .field:-ms-input-placeholder { color: $c-black-base; }
+.form-search .field::placeholder { color: $c-black-base; }
+.form-search .screen-reader-text { position: absolute; top: 0; left: 0; width: 0; height: 0; opacity: 0.5; visibility: hidden; }
+.form-search .form__btn { font-size: 0; line-height: 0; position: absolute; top: 0; right: 0; bottom: 0; width: 29px; background: $c-blue url(../images/ico-search.svg) no-repeat center/16px;  border: 1px solid $c-blue; border-radius: 0 5px 5px 0; appearance: none; transition: opacity .4s; }
+.form-search .form__btn:hover { opacity: .8; }
+
+.form-search .search__field { color: #000; }
+
+.form-search--large .field { height: 45px; padding-right: 50px;  }
+.form-search--large .form__btn { width: 45px; background-size: 26px; }
+
+/* ------------------------------------------------------------ *\
+	Form
+\* ------------------------------------------------------------ */
+
+.form { font-size: 20px; }
+.form .form__btn { font-size: 20px; font-weight: 600; padding: 9px 18px; color: $c-white; background: $c-blue; border-radius: 5px; border: 2px solid $c-blue; min-width: 165px; }
+.form .form__btn:hover { background: $c-white; color: $c-blue; }
+
+.form .form__btn--outline { background: transparent; color: $c-blue; }
+.form .form__btn--outline:hover { background: $c-blue; color: $c-white;  }
+
+.form .field,
+.form select,
+.form textarea { appearance: none; height: 46px; padding: 0 10px 0 10px; border: 2px solid $c-blue; background: #fff; border-radius: 5px; width: 100%; }
+
+.form select { width: 100%; font-style: italic;  background: #fff url(../images/ico-carret-down.svg) no-repeat right 5px center/ 32px 20px; padding: 0 40px 0 10px; font-style: italic; }
+
+.form .form__reset { display: block; padding: 15px 15px; text-decoration: none; text-align: center; }
+.form .form__reset:hover { text-decoration: underline; }
+
+/*form--filter*/
+.form--filter { margin-bottom: 60px; }
+.form--filter h2 { color: $c-gold; margin-bottom: 0; line-height: 1; margin-right: 56px; }
+.form--filter .form__body { display: flex; flex-wrap: wrap; align-items: flex-start;  }
+.form--filter .form__row { width: 210px; max-width: 100%; }
+
+/*form--filter-large*/
+.form--filter-large .form__row { width: 410px; }
+
+$breakpoint-mobile{
+	.form--filter { margin-bottom: 40px;  }
+}
+
+/*form--careers*/
+.form--careers { max-width: 780px; margin: 0 auto; }
+.form--careers .form__body { display: flex; flex-wrap: wrap; margin: 0 -28px -5px; }
+.form--careers .form__row { padding: 0 28px 5px; width: 50%; }
+
+$breakpoint-mobile{
+	.form--careers .form__body { margin: 0 -15px -10px; }
+	.form--careers .form__row { padding: 0 15px 10px; width: 100%;  }
+}
+
+/*form--localize*/
+.form--localize { max-width: 1100px; margin: 0 auto; }
+.form--localize form { display: flex; flex-wrap: wrap; justify-content: center; }
+.form--localize .form__head { width: 100%; text-align: center; color: $c-gold; margin-bottom: 20px; }
+
+.form--localize .form__body { display: flex; flex-wrap: wrap; margin: 0 -12px -5px; }
+.form--localize .form__row { padding: 0 12px 5px; width: 50%; }
+.form--localize .form__actions { flex-shrink: 0; padding-left: 24px; }
+
+$breakpoint-mobile{
+	.form--localize .form__row { width: 100%; padding: 0 12px 10px; }
+	.form--localize .form__actions { padding: 10px 0 0; text-align: center; width: 100%; }
+}
+
+/*form--locations*/
+.form--locations { padding: 0 50px; }
+.form--locations form { display: flex; flex-wrap: wrap;  }
+.form--locations .form__head { width: 100%; text-align: center; margin-bottom: 10px; color: $c-gold; }
+.form--locations .form__body { flex-grow:1; margin: -10px -20px; display: flex; flex-wrap: wrap; }
+.form--locations .form__actions  { flex: 0; padding-left: 40px; }
+.form--locations .form__row { padding: 10px 20px; width: 50%; }
+.form--locations .form__row--small { width: 25%; }
+.form--locations .form__row--xlarge { width: 100%; }
+
+$breakpoint-mobile{
+	.form--locations { padding: 0; }
+	.form--locations .form__body { margin: -5px -10px;  }
+	.form--locations .form__row { width: 100%; padding: 5px 10px; }
+	.form--locations .form__row--small { width: 50%; }
+	.form--locations .form__actions  { text-align: center; padding: 20px 0 0; width: 100%; }
+}
+
+@media(max-width: 575px){
+	.form--locations .form__row--small { width: 100%; }
+}
+
+/*form-live-search*/
+.form-live-search {  }
+.form-live-search .field { background: #fff url(../images/ico-search-blue.svg) no-repeat right 5px center/ 20px; padding-right: 30px; }
+.form-live-search .form__row { max-width: 415px; }
+
+/* ------------------------------------------------------------ *\
+	form--pay-bil
+\* ------------------------------------------------------------ */
+
+.form--pay-bil .form__body { display: inline-block; width: 410px; }
+.form--pay-bil .form__actions { display: inline-block; width: 410px; }
+ 
+/* ------------------------------------------------------------ *\
+	form-checker
+\* ------------------------------------------------------------ */
+
+.form-checker { font-size: 22px; border-radius: 6px; border: 1px solid #121212; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); padding: 20px 20px 30px; margin-bottom: 40px; }
+.form-checker:last-child { margin-bottom: 0; }
+
+.form-checker input::-webkit-inner-spin-button { display: none; }
+
+.form-checker .form__group-head { color: $c-gold; text-align: center; margin-bottom: 58px; }
+.form-checker .form__group-body { display: flex; width: 100%; justify-content: center;  margin-bottom: 62px;  }
+.form-checker .form__group-actions { position: relative; text-align: center;  }
+
+.form-checker .form__col { width: 280px; text-align: center; padding: 0 30px; }
+.form-checker .form__col p { margin-bottom: 6px;  }
+
+.form-checker .form__row { width: 100%; }
+.form-checker .form__row--center { text-align: center; }
+.form-checker .form__row--age input { width: 115px; height: 95px; padding: 0 5px; font-size: 55px; text-align: center; }
+.form-checker .form__row--age .form__controls { padding-top: 60px;  }
+.form-checker .form__row--medium { text-align: center; }
+.form-checker .form__row--medium .form__controls {  width: 492px; margin: 0 auto 17px; max-width: 100%; }
+
+.form-checker .form__row--medium label { display: block; margin-bottom: 15px; }
+.form-checker .form__buttons input { margin: 5px 25px; }
+
+.form-checker .services { margin-top: 60px; padding: 0 43px; }
+.form-checker .services > p { font-size: 20px; }
+.form-checker .service { font-size: 20px; }
+.form-checker .service > a { padding: 65px 27px; }
+.form-checker .service .service__head { padding: 22px 10px;  }
+
+
+
+.form-checker .list-radios--gender { list-style: none; display: flex; flex-wrap: wrap; }
+.form-checker .list-radios--gender li { width: 50%; text-align: center; }
+.form-checker .list-radios--gender .radio { width: 106px; height: 226px; position: relative; text-align: center; margin: 0 auto; padding: 3px; }
+.form-checker .list-radios--gender input { position: absolute; top: 0; left: 0; visibility: hidden; opacity: 0;  }
+.form-checker .list-radios--gender label { display: block; position: relative; }
+.form-checker .list-radios--gender label img { vertical-align: top; transition: opacity .3s;  }
+.form-checker .list-radios--gender label span { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #fff url(images/) no-repeat center/contain; opacity: 0; transition: opacity .3s;  }
+
+
+.form-checker .form-checker__spinner { position: absolute; top: 50px; right: 28%; }
+.form-checker .third-step .form-checker__spinner { top: 0; }
+
+.form-checker .form-checker__error { padding-top: 10px; text-align: center; color: red; }
+
+@media(max-width: 575px){
+	.form-checker .form__group-body { flex-wrap: wrap; }
+	.form-checker .form__col { width: 100%; padding: 0; }
+	.form-checker .form__col + .form__col  { margin-top: 25px;  }
+
+	.form-checker .form__row--age .form__controls { padding-top: 20px;  }
+
+	.form-checker .services { padding: 0;  }
+}
+/* ------------------------------------------------------------ *\
+    Gravity Forms Reset
+\* ------------------------------------------------------------ */
+
+/* Gform Reset*/
+.gform_wrapper.gform_wrapper,
+.gform_wrapper.gform_wrapper .gform_heading,
+.gform_wrapper.gform_wrapper .gform_heading .gform_title,
+.gform_wrapper.gform_wrapper .gform_body,
+.gform_wrapper.gform_wrapper .gform_footer,
+.gform_wrapper.gform_wrapper .gform_footer input.button,
+.gform_wrapper.gform_wrapper .gform_footer input[type=submit],
+.gform_wrapper.gform_wrapper .gform_page_footer input.button,
+.gform_wrapper.gform_wrapper .gform_page_footer input[type=submit],
+.gform_wrapper.gform_wrapper.gf_browser_ie .gform_footer input.button,
+.gform_wrapper .gform_body .gform_fields .gfield,
+.gform_wrapper .gform_body .gform_fields .gfield .gfield_label,
+.gform_wrapper .gform_body .gform_fields ul.gfield_checkbox li label,
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li label,
+.gform_wrapper .gform_body .gform_fields .gfield .ginput_container,
+.gform_wrapper .gform_body .gform_fields .gfield .ginput_container textarea,
+.gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
+.gform_wrapper .gform_body .gform_fields .gfield .ginput_container input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.gform_wrapper .gform_body .gform_fields .gfield .gfield_description { padding: 0; margin: 0; }
+
+.gform_wrapper .gform_footer { position: relative; }
+.gform_wrapper .gform_footer .gform_ajax_spinner { position: absolute; top: 50%; padding: 0; transform: translateY(-50%); }
+
+.gform_wrapper .gform_body .gform_fields { display: flex; flex-wrap: wrap; }
+
+.gform_wrapper .gform_body .gform_fields .gfield.gfield--captcha,
+.gform_wrapper .gform_body .gform_fields .gfield.gfield--checkbox,
+.gform_wrapper .gform_body .gform_fields .gfield.gfield--radio,
+.gform_wrapper .gform_body .gform_fields .gfield,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield.gfield_error.gfield--checkbox,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield.gfield_error.gfield--captcha,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield.gfield_error.gfield--radio,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield.gfield_error { width: 100%; max-width: 100% !important; margin-bottom: 0 !important; margin-top: 0 !important; border: 0; background-color: transparent; }
+
+.gform_wrapper .gform_body .gform_fields .gfield--medium,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield--medium.gfield_error { width: 50%; max-width: 50%; }
+
+.gform_wrapper .gform_body .gform_fields .gfield--small,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield--small.gfield_error { width: 25%; max-width: 25%; }
+
+.gform_wrapper.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container,
+.gform_wrapper.gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label { margin-top: 0; }
+
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_wrapper .gform_footer input.button,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_wrapper .gform_footer input[type=submit],
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_wrapper .gform_page_footer input.button,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_wrapper .gform_page_footer input[type=submit] { line-height: initial; min-height: initial; width: auto; }
+
+/* ------------------------------------------------------------ *\
+    Gravity Forms Deafult Style
+\* ------------------------------------------------------------ */
+
+/* Base */
+
+.gform_wrapper.gform_wrapper { padding-top: 10px; }
+.gform_wrapper.gform_wrapper .gform_heading {  }
+.gform_wrapper.gform_wrapper .gform_heading .gform_title {  }
+.gform_wrapper.gform_wrapper span.gform_description {  }
+
+.gform_wrapper .gform_body .gform_fields .gfield .gfield_description { padding-top: 5px;  }
+
+/* Fields */
+
+.gform_wrapper .gform_body .gform_fields .gfield .gfield_label,
+.gform_wrapper .gform_body .gform_fields .gfield.gfield--captcha .gfield_label  { font-weight: 300; display: block; margin-bottom: 10px; }
+.gform_wrapper .gform_body .gform_fields .gfield.gfield--captcha .gfield_label {  font-style: italic; }
+
+.gform_wrapper .gform_body .gform_fields { margin: 0 -25px !important; }
+
+.gform_wrapper .gform_body .gform_fields .gfield,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield.gfield_error { padding: 0 25px; position: relative; }
+
+.gform_wrapper .gform_body .gform_fields .gfield.gfield,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield.gfield.gfield_error { margin-bottom: 25px !important; }
+
+
+.gform_wrapper .gform_body .gform_fields .gfield .ginput_container textarea,
+.gform_wrapper .gform_body .gform_fields .gfield .ginput_container select,
+.gform_wrapper .gform_body .gform_fields .gfield .ginput_container input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) { width: 100%;  height: 46px; padding: 0 14px 0 14px; border: 2px solid $c-blue; background: #fff; border-radius: 5px; font-style: italic; font-weight: 300; appearance: none; }
+
+.gform_wrapper .gform_body .gform_fields .gfield .ginput_container textarea { display: block;  height: 200px; resize: vertical; padding: 14px; }
+.gform_wrapper .gform_body .gform_fields .gfield .ginput_container select { padding: 0 30px 0 14px; background: #fff url(../images/ico-carret-down.svg) no-repeat right 0px center/ 32px 20px; padding: 0 25px 0 10px;}
+
+/* Checkbox and Radio */
+
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio { display: flex; margin:-5px -25px; }
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li { padding: 5px 25px !important; margin: 0 !important;  }
+
+.gform_wrapper .gform_body .gform_fields ul.gfield_checkbox li input[type=checkbox],
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li input[type=radio] { display: none; }
+
+.gform_wrapper .gform_body .gform_fields ul.gfield_checkbox li label,
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li label { position: relative; padding-left: 26px; font-weight: 400 !important; display: block; max-width: 100%; }
+
+.gform_wrapper .gform_body .gform_fields ul.gfield_checkbox li label:before,
+.gform_wrapper .gform_body .gform_fields ul.gfield_checkbox li label:after,
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li label:before,
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li label:after { content: ''; position: absolute; top: 10px; transform: translateY(-50%); left: 0; }
+
+.gform_wrapper .gform_body .gform_fields ul.gfield_checkbox li label:before,
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li label:before { width: 18px; height: 18px; border: 1px solid $c-blue; }
+
+.gform_wrapper .gform_body .gform_fields ul.gfield_checkbox li label:after,
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li label:after { display: none; }
+
+.gform_wrapper .gform_body .gform_fields ul.gfield_checkbox li input:checked + label:after,
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li input:checked + label:after { display: block; }
+
+.gform_wrapper .gform_body .gform_fields ul.gfield_checkbox li label:before,
+.gform_wrapper .gform_body .gform_fields ul.gfield_checkbox li label:after { border-radius: 3px; }
+
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li label:before,
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li label:after { border-radius: 100%; }
+
+/* Variant 1*/
+
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li label:after,
+.gform_wrapper .gform_body .gform_fields ul.gfield_checkbox li label:after { left: 5px; width: 8px; height: 8px; background-color: $c-blue; }
+
+.gform_wrapper .gform_body .gform_fields ul.gfield_radio li label:after { border-radius: 100%; }
+
+
+/* Datepicker */
+
+.ui-datepicker { display: none; }
+
+.ui-datepicker select { appearance: none; margin: 0 5px; border: 0; background: transparent; }
+.ui-datepicker select::-ms-expand { display: none; }
+
+.ui-datepicker .ui-datepicker-next,
+.ui-datepicker .ui-datepicker-prev { position: relative; background: transparent; }
+
+.ui-datepicker .ui-datepicker-next:before,
+.ui-datepicker .ui-datepicker-prev:before { content: ''; position: absolute; top: 50%; left: 50%; border: solid; border-width: 5px 5px 0; border-color: #fff transparent transparent; }
+
+.ui-datepicker .ui-datepicker-prev:before { transform: translate(-50%, -50%) rotate(90deg); }
+.ui-datepicker .ui-datepicker-next:before  { transform: translate(-50%, -50%) rotate(-90deg); }
+
+.ui-datepicker .ui-datepicker-header { background: orange; }
+
+.ui-datepicker .ui-datepicker-calendar thead,
+.ui-datepicker .ui-datepicker-calendar tbody td,
+.ui-datepicker .ui-datepicker-calendar .ui-state-default { background: #fff; }
+
+.ui-datepicker .ui-datepicker-calendar .ui-state-active { border: 0; background: orange; color: #fff; margin: 0; }
+
+/* Footer */
+
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_wrapper .gform_footer input.button,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_wrapper .gform_footer input[type=submit],
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_wrapper .gform_page_footer input.button,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_wrapper .gform_page_footer input[type=submit] { appearance: none;  font-size: 20px; font-weight: 600; padding: 9px 18px; color: $c-white; background: $c-blue; border-radius: 5px; border: 2px solid $c-blue; min-width: 165px;  }
+
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_wrapper .gform_footer input.button:hover,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_wrapper .gform_footer input[type=submit]:hover,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_wrapper .gform_page_footer input.button:hover,
+.gform_wrapper.gform_wrapper.gform_wrapper.gform_wrapper .gform_page_footer input[type=submit]:hover { background: $c-white; color: $c-blue;  }
+
+/* Spinner */
+
+.gform_wrapper .gform_footer .gform_ajax_spinner {  }
+
+/* Error States */
+
+.gform_wrapper.gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning,
+.gform_wrapper.gform_wrapper div.validation_error { border-color: red; background-color: transparent; }
+
+.gform_wrapper.gform_wrapper .gfield_error .gfield_label,
+.gform_wrapper.gform_wrapper .validation_message,
+.gform_wrapper.gform_wrapper div.validation_error,
+.gform_wrapper.gform_wrapper li.gfield_error div.ginput_complex.ginput_container label,
+.gform_wrapper.gform_wrapper li.gfield_error ul.gfield_checkbox,
+.gform_wrapper.gform_wrapper li.gfield_error ul.gfield_radio,
+.gform_wrapper.gform_wrapper .gfield_required { color: red; }
+
+.gform_wrapper.gform_wrapper .validation_message,
+.gform_wrapper.gform_wrapper .gfield_required {/* display: none; */}
+.gform_wrapper.gform_wrapper div.validation_error { display: none;  }
+
+.gform_wrapper .gform_body .gform_fields .gfield_error .ginput_container textarea,
+.gform_wrapper .gform_body .gform_fields .gfield_error .ginput_container select,
+.gform_wrapper .gform_body .gform_fields .gfield_error .ginput_container input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) { }
+
+/* Confirmation */
+
+.gform_confirmation_wrapper .gform_confirmation_message { font-size: 24px; }
+
+/* ------------------------------------------------------------ *\
+	small-fields
+\* ------------------------------------------------------------ */
+
+.small-fields_wrapper {  }
+
+.small-fields_wrapper.gform_wrapper .gform_body .gform_fields .gfield--medium,
+.small-fields_wrapper.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield--medium.gfield_error { width: 460px; max-width: 460px;  }
+
+.small-fields_wrapper.gform_wrapper .gform_body .gform_fields .gfield--medium.gfield--checkbox,
+.small-fields_wrapper.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield--medium.gfield--checkbox.gfield_error { width: 100%; max-width: 100%;  }
+
+/* ------------------------------------------------------------ *\
+	appointment
+\* ------------------------------------------------------------ */
+
+.appointment_wrapper {}
+
+.appointment_wrapper.gform_wrapper .gform_body .gform_fields { margin: 0 -11px !important; }
+
+.appointment_wrapper.gform_wrapper .gform_body .gform_fields .gfield,
+.appointment_wrapper.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield.gfield_error { padding: 0 11px; }
+
+.appointment_wrapper.gform_wrapper .gform_body .gform_fields .gfield.gfield--radio .gfield_label  { margin-bottom: 0; margin-right: 50px; }
+.appointment_wrapper.gform_wrapper .gform_body .gform_fields .gfield.gfield--radio { display: flex; align-items: center; }
+.appointment_wrapper.gform_wrapper .gform_body .gform_fields .gfield.gfield--radio .ginput_container { flex-grow: 1; left: 25px; }
+.appointment_wrapper.gform_wrapper .gform_body .gform_fields .gfield.gfield--radio .validation_message { flex-grow: 1; padding-left: 11px; position: absolute; top: 100%; left: 0;  }
+
+.appointment_wrapper.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield.gfield--radio.gfield_error { margin-bottom: 40px !important;  }
+
+$breakpoint-mobile{
+	.gform_wrapper .gform_body .gform_fields .gfield--small, .gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield--small.gfield_error { width: 50%; }
+
+	.small-fields_wrapper.gform_wrapper .gform_body .gform_fields .gfield--medium,
+	.small-fields_wrapper.gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield--medium.gfield_error { width: 100%; }
+
+	.appointment_wrapper.gform_wrapper .gform_body .gform_fields .gfield.gfield--radio { flex-wrap: wrap;  }
+	.appointment_wrapper.gform_wrapper .gform_body .gform_fields .gfield.gfield--radio .gfield_label { margin-right: 0; margin-bottom: 10px;  }
+}
+
+@media(max-width: 575px){
+	.gform_wrapper .gform_body .gform_fields .gfield--small, .gform_wrapper.gform_wrapper.gform_wrapper.gform_validation_error .gform_body .gform_fields .gfield--small.gfield_error { width: 100%; }
+}
+
+$breakpoint-mobile-portrait{
+	.gform_wrapper .ginput_container.ginput_recaptcha { transform: scale(.9) translateX(-15px);  }
+}

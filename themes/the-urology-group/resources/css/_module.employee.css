@@ -1,0 +1,47 @@
+/* ------------------------------------------------------------ *\
+	Employees
+\* ------------------------------------------------------------ */
+
+.employee { position: relative; }
+.employee .employee__link { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; }
+
+.employees > ul:not([class]) { list-style: none; padding: 0; display: flex; flex-wrap: wrap; margin: -17px; }
+.employees > ul:not([class]) > li { width: 33.33%; padding: 17px; display: flex; }
+.employees .employees__not-found { text-align: center; }
+
+$breakpoint-mobile{
+	.employees > ul:not([class]) { margin: -15px; }
+	.employees > ul:not([class]) > li { width: 50%; padding: 15px; }
+}
+
+@media(max-width: 575px){
+	.employees > ul:not([class]) > li { width: 100%; }
+}
+
+/* ------------------------------------------------------------ *\
+	employee
+\* ------------------------------------------------------------ */
+
+.employee { width: 100%; display: flex; flex-direction: column; border: 1px solid $c-gold; border-radius: 6px 6px 60px 6px; text-align: center; font-size: 18px; position: relative; transition: background .3s, color .3s; overflow: hidden; min-height: 520px; }
+.employee p { margin-bottom: 15px;  }
+.employee p:last-child { margin-bottom: 0; }
+.employee h5 { font-size: 24px; font-family: $ff-base; font-weight: 600; margin-bottom: 0; line-height: 1; }
+.employee h6 { font-size: 20px; font-family: $ff-base; font-weight: 500; text-transform: uppercase; margin-bottom: 5px; }
+.employee ul { list-style: none; }
+
+.employee .employee__image { width: 100%; padding-bottom: 100%; position: relative; background-size: cover; background-position: top center;  }
+.employee .employee__image:after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(10, 78, 104, 0.9); opacity: 0; transition: opacity .3s;  }
+
+.employee .employee__content { padding: 15px 20px; flex-grow: 1; display: flex; align-items: center; justify-content: center; }
+.employee .btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; z-index: 2; margin-top: -40px; }
+
+/*hover for desktop devices*/
+@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+	.employee:hover { background: $c-blue; color: $c-white;  }
+	.employee:hover .employee__image:after { opacity: 1; }
+	.employee:hover .btn  { opacity: 1; }
+}
+
+$breakpoint-mobile{
+	.employee .btn { position: static; transform: none; opacity: 1; border-color: $c-blue; color: $c-blue; width: auto; height: auto; margin: 0 auto 15px; }
+}

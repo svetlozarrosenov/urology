@@ -1,0 +1,30 @@
+<?php
+$staff_to_exclude = crb_get_post_type_by_meta_value('crb_staff', '_crb_staff_hide_from_request_appointment_form', 'yes', 'ID');
+$args = array(
+	'post_type' => $post_type,
+	'posts_per_page' => 100,
+	'post__not_in' => $staff_to_exclude,
+);
+
+if ( isset( $ids ) ) {
+	$args['post__in'] = crb_remove_from_array($ids, $staff_to_exclude);
+	$args['orderby'] = 'post__in';
+}
+
+if ( isset( $tax_query ) ) {
+	$args['tax_query'] = [$tax_query];
+}
+
+$loop = new WP_Query( $args );
+?>
+
+<?php if ( ! $loop->have_posts() ) {
+	return;
+}
+?>
+
+<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+	<option value="<?php the_ID(); ?>"><?php the_title(); ?></option>
+<?php endwhile; 
+
+wp_reset_postdata();

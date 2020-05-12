@@ -1,0 +1,131 @@
+/* ------------------------------------------------------------ *\
+	Locations
+\* ------------------------------------------------------------ */
+
+.locations .locations__head { margin-bottom: 45px; }
+.locations .locations__body { display: flex; justify-content: space-between; background: #fff; }
+.locations .locations__aside { width: 373px; }
+.locations .locations__content { position: relative; width: calc(100% - 383px); overflow: hidden; }
+.locations .locations__map { height: 530px; }
+.locations .locations__aside.mCustomScrollbar { padding: 0; }
+.locations .locations__aside .mCSB_container { padding: 28px 44px; }
+.locations .locations__list { list-style: none; }
+.locations .locations__list a { text-decoration: none; }
+
+/* Locations Actions */
+.locations .locations__actions { font-size: 20px; letter-spacing: 0.08em; }
+.locations .locations__actions ul { list-style: none; text-align: center; }
+.locations .locations__actions li { display: inline-block; padding: 0 1px; }
+.locations .locations__actions a { display: inline-block; position: relative; text-decoration: none; padding: 3px 15px 3px 30px; border: 1px solid transparent; }
+.locations .locations__actions a:before { content: '';  display: inline-block; width: 8px; height: 8px; transform: translateY(-25%) rotate(45deg); background: #000; position: absolute; top: 50%; left: 15px;  }
+.locations .locations__actions .current a { border-color: #000; }
+
+
+
+/* Locations Map Markers */
+.locations .locations__map i { position: relative; display: block; height: 52px; width: 36px; cursor: pointer; transition: background .2s; background: url('../images/marker.svg') no-repeat center/contain; }
+.locations .locations__map i:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('../images/marker-active.svg') no-repeat center/contain; transition: opacity; transition-duration: .2s; opacity: 0; }
+
+.locations .locations__map .active { z-index: 5; }
+.locations .locations__map .hover { z-index: 10; }
+
+.locations .locations__map .hover i:before,
+.locations .locations__map .active i:before { opacity: 1; }
+
+/* Locations Map Scroll Message */
+.locations .gm-style-pbc { pointer-events: none; z-index: 5!important; }
+
+/* locations List*/
+.locations .locations__list p { margin-bottom: 10px; }
+.locations .locations__list p:last-child { margin-bottom: 0; }
+.locations .locations__list > li { border: 1px solid #121212; background: $c-white; padding: 15px; }
+.locations .locations__list > li + li { margin-top: 10px; }
+.locations .locations__list .current { background: $c-blue; color: $c-white; }
+.locations .locations__list .current h5 { color: $c-white; }
+.locations .locations__list .current .links-all { color: $c-white; }
+.locations .locations__list .current .links-all:before { border-color: $c-white; }
+.locations .locations__list .current .links-all:before  {  }
+
+/*locations__info*/
+.locations .locations__info { list-style: none; line-height: 1.4; }
+.locations .locations__info h5 { margin-bottom: 6px; }
+.locations .locations__info h5:last-child { margin-bottom: 0; }
+.locations .locations__info > li + li { margin-top: 60px; }
+
+.locations .gm-svpc { display: none !important;  }
+.locations .svg-clipper { position: absolute; top: 0; left: 0; pointer-events: none; opacity: 0;  }
+
+.locations__list .location__list-item { position: relative; }
+.locations__list .location__list-item:hover { cursor: pointer; }
+.locations__list .single-locations-details > a { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; }
+.locations__list .single-locations-directions { position: relative; z-index: 10; }
+
+.location-permalink { position: relative; z-index: 15; }
+
+.location-address .location-address__link { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; }
+
+@media(min-width: 1921px){
+	.locations .svg-clipper { display: none; }
+}
+
+$breakpoint-mobile{
+	.locations .locations__body { flex-wrap: wrap; }
+	.locations .locations__aside { width: 100%; margin-bottom: 20px; }
+	.locations .locations__content { width: 100%; }
+	.locations .locations__map { height: 300px; }
+
+	.locations .locations__info > li + li { margin-top: 20px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Locations--full
+\* ------------------------------------------------------------ */
+
+.locations--full .locations__map { clip-path: url(#maskRect1111); }
+.locations--full .locations__map i { background: url('../images/marker-active.svg') no-repeat center/contain; }
+.locations--full .locations__map i:before { background: url('../images/marker.svg') no-repeat center/contain; }
+.locations--full .locations__content { width: 100%; text-align: center; margin-bottom: 20px;  }
+
+.locations--full .locations__map { margin-bottom: 5px; }
+
+.locations--full .locations__body { width: 100%; }
+.locations--full .locations__head { width: 100%; margin-bottom: 60px; }
+.locations--full .locations__aside { width: 100%; }
+
+.locations--full .locations__container { width: 100%; }
+
+.locations--full .locations__list { display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: -14px; }
+.locations--full .locations__list h5 { color: $c-gold;  }
+.locations--full .locations__list li { width: calc(50% - 7px); margin-bottom: 14px; border-radius: 5px; }
+.locations--full .locations__list li + li { margin-top: 0;  }
+.locations--full .locations__list ul { list-style: none; display: flex; flex-wrap: wrap;  }
+.locations--full .locations__list ul li { width: 50%; }
+.locations--full .locations__list ul li:nth-child(even) { padding-left: 45px; }
+.locations--full .locations__list .fax-info { text-decoration: underline; }
+.locations--full .locations__list .fax-info:hover { text-anchor: }
+
+.locations--full .locations__list .current { background: $c-white; color: $c-black-base; border: 4px solid #0a4e68; border: 4px solid #0a4e68; padding: 12px; background-color: #f1f1f1; }
+.locations--full .locations__list .current h5 { color: $c-gold; }
+.locations--full .locations__list .current .links-all { color: $c-blue; }
+.locations--full .locations__list .current .links-all:before { border-color: $c-blue; }
+.locations--full .locations__list .current .links-all:after { background: $c-blue;  }
+
+$breakpoint-mobile{
+	.locations--full .locations__aside { margin-bottom: 0; }
+	.locations--full .locations__map { clip-path: none; }
+	.locations--full .locations__head { margin-bottom: 40px; }
+
+	.locations--full .locations__list li { width: 100%; }
+}
+
+@media(max-width: 575px){
+	.locations--full .locations__list ul li { width: 100%; }
+	.locations--full .locations__list ul li:nth-child(even) { padding-left: 0;  }
+}
+
+/* ------------------------------------------------------------ *\
+	locations--single
+\* ------------------------------------------------------------ */
+
+.locations--single .locations__map i { background: url('../images/marker-active.svg') no-repeat center/contain; width: 55px; height: 81px; }
+.locations--single .locations__map i:before { background: url('../images/marker-active.svg') no-repeat center/contain; }

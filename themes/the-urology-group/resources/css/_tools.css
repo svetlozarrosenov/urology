@@ -1,0 +1,7 @@
+@define-placeholder clearfix { content: ''; line-height: 0; display: table; clear: both; }
+@define-placeholder center { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); }
+@define-placeholder bgCover { background-size: cover; background-position: center center; background-repeat: no-repeat; }
+@define-placeholder bgContain { background-size: contain; background-position: center center; background-repeat: no-repeat; }
+@define-placeholder positioning { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+@define-placeholder bgWithRadius { background-color: rgba(255, 255, 255, 0.8); border-radius: 5px;  }
+@define-placeholder hiddenElement { transition: opacity .4s, visibility .4s; opacity: 1; visibility: visible;  }
